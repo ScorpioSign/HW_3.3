@@ -38,11 +38,9 @@ FULL JOIN city
 ON employee.city_id = city.id;
 
 
-SELECT first_name AS Имя,
-       city.name AS Город
-FROM city
-RIGHT JOIN employee
-ON city.id = employee.city_id;
+SELECT employee.first_name, city.name
+FROM employee
+CROSS JOIN city;
 
 
 SELECT city.name
